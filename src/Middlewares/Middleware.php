@@ -9,7 +9,7 @@ class Middleware implements IMiddleware{
         TualoApplication::use('require-js',function(){
             try{
 
-                TualoApplication::javascript('require_js', './require-js/require.js',[],-5000000);
+                // TualoApplication::javascript('require_js', './require-js/require.js',[],-5000000);
                 
             }catch(\Exception $e){
                 TualoApplication::set('maintanceMode','on');
