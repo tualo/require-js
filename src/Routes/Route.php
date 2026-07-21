@@ -13,6 +13,7 @@ class Route extends \Tualo\Office\Basic\RouteWrapper
     {
 
         R::add('/require-js/(?P<file>[\/.\w\d\-]+)', function ($matches) {
+            return;
             if (file_exists(dirname(__DIR__, 2) . '/src/js/' . $matches['file'] . '')) {
                 $path_parts = pathinfo(dirname(__DIR__, 2) . '/src/js/' . $matches['file'] . '');
                 if ($path_parts['extension'] == 'js')   TualoApplication::contenttype('application/javascript');
